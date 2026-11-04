@@ -4,11 +4,32 @@
   padding: 0;
 }
 
+button.adicionar{
+  width: fit-content;
+  padding: 6px;
+}
+
 body {
   font-family: system-ui, sans-serif;
   background: #f6f4ee;
   color: #1e2430;
 }
+
+article.linha{
+
+  width:100%;
+
+  display: flex;
+
+  flex-direction:column;
+  gap:8px;
+}
+
+span{
+  display: block;
+  width: 100%;
+}
+
 
 .topo {
   background: #1e2430;
@@ -52,9 +73,27 @@ select {
   font-weight: 600;
 }
 
-.cardapio__itens {
-  display: grid;
+.cardapioItens {
+  display: flex;
+  flex-wrap:wrap;
   gap: 16px;
+}
+
+span.botao{
+  margin:8px;
+  width: fit-content;
+}
+span.preco{
+  margin:8px;
+  width: fit-content;
+}
+span.descricao{
+  margin:8px;
+  width: fit-content;
+}
+span.botao{
+  margin:8px;
+  width: fit-content;
 }
 
 /* Etapa 2: os estilos dos cards entram aqui */
@@ -106,13 +145,21 @@ select {
 }
 
 @media (min-width: 600px) {
-  .cardapio__itens {
+  .cardapioItens {
     grid-template-columns: 1fr 1fr;
+    padding: 0px 16px;
+    padding-bottom: 16px;
   }
+   article.linha{
+  width: calc(50% - 8px);
+
+   }
 }
 
 @media (min-width: 900px) {
   .pagina {
     grid-template-columns: 1fr 320px;
   }
+
+ 
 }
